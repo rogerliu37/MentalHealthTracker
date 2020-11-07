@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1098682452959",
+    "firebase_url": "https://mentalhealthapp-3430e.firebaseio.com",
+    "project_id": "mentalhealthapp-3430e",
+    "storage_bucket": "mentalhealthapp-3430e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098682452959:android:9377635de5e44d1fdc526a",
+        "android_client_info": {
+          "package_name": "tylerliu.MentalHealthApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098682452959-mjpb0a0nfui006ngg0r6g947n4s9v88l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tylerliu.MentalHealthApp",
+            "certificate_hash": "2403509c44884a1000c0e2ad89f39200578113a0"
+          }
+        },
+        {
+          "client_id": "1098682452959-fb569kjshj359gcnq11g0g1rtfuj4e84.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKe54rYDXyimo8CjJD3CtdErcyicKoTXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1098682452959-fb569kjshj359gcnq11g0g1rtfuj4e84.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1098682452959-atsm5pihnrddik3o2st7lu529g5u5ras.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "tylerliu.MentelHealthApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
