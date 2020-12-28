@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class profileTab extends StatelessWidget {
+class ProfileTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -30,7 +30,6 @@ class profileTab extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Row(
-                //mainAxisAlignment: MainAxisAlignment.center,git
                 children: <Widget>[
                   CircleAvatar(
                     radius: 50.0,

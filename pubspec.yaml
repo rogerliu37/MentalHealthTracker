@@ -1,13 +1,12 @@
-name: demo3rdwheelhp
+name: MentalHealthTracker
 description: A new Flutter application.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  ##syncfusion_flutter_calendar: ^17.4.40-beta
   table_calendar: ^2.2.3
   shared_preferences: ^0.5.4+5
   flutter:

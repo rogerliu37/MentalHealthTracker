@@ -1,7 +1,6 @@
 import 'Data.dart';
-import 'dart:collection';
 
-class dayHolder {
+class DayHolder {
   List<Data> dayData = new List();
 
   void addNode(Data data) {

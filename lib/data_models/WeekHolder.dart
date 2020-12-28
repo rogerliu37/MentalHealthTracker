@@ -1,11 +1,9 @@
-import 'Data.dart';
-import 'dart:collection';
-import 'dayHolder.dart';
+import 'DayHolder.dart';
 
-class weekHolder {
-  List<dayHolder> week = new List();
+class WeekHolder {
+  List<DayHolder> week = new List();
 
-  void addDay(dayHolder day) {
+  void addDay(DayHolder day) {
     week.add(day);
   }
 

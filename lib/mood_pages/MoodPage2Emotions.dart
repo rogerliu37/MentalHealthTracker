@@ -1,23 +1,11 @@
-import 'package:demo3rdwheelhp/moodPage3Scale.dart';
+import 'MoodPage3Scale.dart';
 import 'package:flutter/material.dart';
 
-/*
-  Bool values for checkListTiles
- */
 bool _checked = false;
 bool _checked1 = false;
 bool _checked2 = false;
-bool _checked3 = false;
-bool _checked4 = false;
-bool _checked5 = false;
-bool _checked6 = false;
-bool _checked7 = false;
-bool _checked8 = false;
-bool _checked9 = false;
-bool _checked10 = false;
-bool _checked11 = false;
 
-class moodPage2Emotions extends StatelessWidget {
+class MoodPage2Emotions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -28,13 +16,8 @@ class moodPage2Emotions extends StatelessWidget {
           backgroundColor: Colors.amberAccent[200],
         ),
         body: Center(
-          child: Container(
-//              decoration: BoxDecoration(
-//                  image: DecorationImage(
-//                      image: AssetImage('images/cat.jpeg'), fit: BoxFit.cover)),
-              child: MyStatefulWidget()),
-        )
-    );
+          child: Container(child: MyStatefulWidget()),
+        ));
   }
 }
 
@@ -93,17 +76,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             activeColor: Colors.redAccent,
             checkColor: Colors.black,
           ),
-
           Padding(
             padding:
                 const EdgeInsets.symmetric(vertical: 16.0, horizontal: 10.0),
             child: RaisedButton(
               onPressed: () {
-                // Validate will return true if the form is valid, or false if
-                // the form is invalid.
                 if (_formKey.currentState.validate()) {
-                  // Process data.
-                  //Goes to next subpage
                   navigateToPage3(context);
                 }
               },
@@ -118,5 +96,5 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
 Future navigateToPage3(context) async {
   Navigator.push(
-      context, MaterialPageRoute(builder: (context) => moodPage3Scale()));
+      context, MaterialPageRoute(builder: (context) => MoodPage3Scale()));
 }

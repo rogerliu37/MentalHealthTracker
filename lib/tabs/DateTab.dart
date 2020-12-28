@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-class dateTab extends StatelessWidget {
+class DateTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
         backgroundColor: Colors.redAccent[700],
         body: Center(
-          child: Container(
-              child: MyStatefulWidget()),
+          child: Container(child: MyStatefulWidget()),
         ));
   }
 }
@@ -24,7 +23,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   void initState() {
-    //TODO: implement initState
     super.initState();
     _controller = CalendarController();
   }
@@ -46,9 +44,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     todayStyle: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18.0,
-                        color: Colors.white
-                    )
-                ),
+                        color: Colors.white)),
                 headerStyle: HeaderStyle(
                   centerHeaderTitle: true,
                   formatButtonDecoration: BoxDecoration(
@@ -57,7 +53,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                   formatButtonTextStyle: TextStyle(),
                 ),
-                onDaySelected: (date, events){
+                onDaySelected: (date, events) {
                   print(date.toIso8601String());
                 },
                 builders: CalendarBuilders(
@@ -82,12 +78,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                         style: TextStyle(color: Colors.white),
                       )),
                 ),
-
-                calendarController: _controller,),
-
+                calendarController: _controller,
+              ),
             ],
           ),
-        )
-    );
+        ));
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'homeTab.dart';
-import 'dateTab.dart';
-import 'moodTab.dart';
-import 'profileTab.dart';
+import 'tabs/HomeTab.dart';
+import 'tabs/DateTab.dart';
+import 'tabs/MoodTab.dart';
+import 'tabs/ProfileTab.dart';
 
 void main() {
   runApp(new MainApp());
@@ -21,10 +21,10 @@ class MainApp extends StatelessWidget {
         ),
         body: new TabBarView(
           children: [
-            new homeTab(),
-            new moodTab(),
-            new dateTab(),
-            new profileTab(),
+            new HomeTab(),
+            new MoodTab(),
+            new DateTab(),
+            new ProfileTab(),
           ],
         ),
         bottomNavigationBar: Container(

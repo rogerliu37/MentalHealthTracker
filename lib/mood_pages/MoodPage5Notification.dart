@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'Data.dart';
+import '../data_models/Data.dart';
 
-class moodPage5Notification extends StatelessWidget {
+class MoodPage5Notification extends StatelessWidget {
   final Data data;
-  moodPage5Notification({this.data});
+  MoodPage5Notification({this.data});
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -38,7 +38,6 @@ class _LocalNotificationsState extends State<LocalNotifications> {
     this.data = data;
   }
 
-  final _formKey = GlobalKey<FormState>();
   FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
   AndroidInitializationSettings androidInitializationSettings;
@@ -65,23 +64,7 @@ class _LocalNotificationsState extends State<LocalNotifications> {
   }
 
   Future<void> scheduleANotification() async {
-    // var timeDelayed = DateTime.now().add(Duration(seconds: 5));
-    // AndroidNotificationDetails androidNotificationDetails =
-    //     AndroidNotificationDetails(
-    //         'second channel ID', 'second Channel title', 'second channel body',
-    //         priority: Priority.High,
-    //         importance: Importance.Max,
-    //         ticker: 'test');
-
-    // IOSNotificationDetails iosNotificationDetails = IOSNotificationDetails();
-
-    // NotificationDetails notificationDetails =
-    //     NotificationDetails(androidNotificationDetails, iosNotificationDetails);
-    // await flutterLocalNotificationsPlugin.schedule(1, 'Hello there',
-    //     'please subscribe my channel', timeDelayed, notificationDetails);
-    var scheduledNotificationDateTime =
-        // DateTime.now().add(Duration(seconds: 5));
-        DateTime.now().add(Duration(days: 1));
+    var scheduledNotificationDateTime = DateTime.now().add(Duration(days: 1));
     var androidPlatformChannelSpecifics = AndroidNotificationDetails(
         'your other channel id',
         'your other channel name',
@@ -92,7 +75,6 @@ class _LocalNotificationsState extends State<LocalNotifications> {
     await flutterLocalNotificationsPlugin.schedule(
         0,
         'scheduled title',
-        // data.text
         'scheduled body',
         scheduledNotificationDateTime,
         platformChannelSpecifics);
@@ -102,8 +84,6 @@ class _LocalNotificationsState extends State<LocalNotifications> {
     if (payLoad != null) {
       print(payLoad);
     }
-
-    // we can set navigator to navigate another screen
   }
 
   Future onDidReceiveLocalNotification(

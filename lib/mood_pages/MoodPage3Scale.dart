@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'moodPage4Text.dart';
-import 'Data.dart';
+import 'MoodPage4Text.dart';
+import '../data_models/Data.dart';
 
-class moodPage3Scale extends StatelessWidget {
+class MoodPage3Scale extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -31,8 +31,6 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   final data = Data(mood: 0, dateTime: DateTime.now(), text: "");
-  final _formKey = GlobalKey<FormState>();
-  //holds the value of the slider (how emotional the user is)
   var sliderValue = 0.0;
   @override
   Widget build(BuildContext context) {
@@ -133,7 +131,7 @@ Future navigateToPage4(context, data) async {
   Navigator.push(
     context,
     MaterialPageRoute(
-      builder: (context) => moodPage4Text(
+      builder: (context) => MoodPage4Text(
         data: data,
       ),
     ),

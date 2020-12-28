@@ -1,15 +1,11 @@
-import 'Data.dart';
-import 'dart:collection';
-import 'month.dart';
+class YearHolder {
+  List<YearHolder> year = new List();
 
-class monthHolder {
-  List<monthHolder> year = new List();
-
-  void addWeek(monthHolder month) {
+  void addMonth(YearHolder month) {
     year.add(month);
   }
 
-  double averageMonthyMood() {
+  double averageYearlyMood() {
     Iterator i = year.iterator;
     double total = 0;
     int count = 0;
