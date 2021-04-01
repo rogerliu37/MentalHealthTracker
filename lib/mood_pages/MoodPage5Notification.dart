@@ -74,8 +74,8 @@ class _LocalNotificationsState extends State<LocalNotifications> {
         androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.schedule(
         0,
-        'scheduled title',
-        'scheduled body',
+        'Here\'s a reminder to stay happy!',
+        data.mood,
         scheduledNotificationDateTime,
         platformChannelSpecifics);
   }
